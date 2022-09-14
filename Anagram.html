@@ -9,12 +9,15 @@
   <body>
     <script>
       function isAnagram(str1, str2) {
-        //if
+        //if the strings dont match in length then they immediately cannot be anagrams
         if (str1.length !== str2.length) {
           return false;
         }
+        //get arrays from the strings so that we can sort the characters
         const strArr1 = Array.from(str1).sort();
         const strArr2 = Array.from(str2).sort();
+        //stringify and equate the strings js inbuilt method
+        return strArr1.toString() === strArr2.toString();
       }
     </script>
   </body>
